@@ -36,7 +36,7 @@ jobs:
       uses: actions/upload-artifact@v2
       if: always()
       with:
-          name: allure-report
+          name: HTML-report
           path: results/report.html   
     - name: Deploy to pages
       if: always()
