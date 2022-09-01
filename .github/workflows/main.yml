@@ -25,4 +25,4 @@ jobs:
     - name: Install newman HTML rporter
       run: npm install -g newman
     - name: Run API tests
-      run: newman run petstore.collection.json
+      run: npm run petstore:report
