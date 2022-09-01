@@ -24,6 +24,8 @@ jobs:
       run: npm install -g newman
     - name: Install newman HTML rporter
       run: npm install -g newman
+    - name: Make Directory for results
+      run: mkdir -p testResults
     - name: Run API tests
       run: npm run petstore:report
     - name: Upload Results
