@@ -25,7 +25,7 @@ jobs:
     - name: Install newman HTML rporter
       run: npm install -g newman
     - name: Run API tests
-      run: newman run petstore.collection.json -r htmlextra --reporter-htmlextra-export ./results/report.html --reporter-htmlextra-export results/report.html
+      run: newman run petstore.collection.json -r htmlextra --reporter-htmlextra-export ./results/report.html 
     - name: Upload Results
       uses: actions/upload-artifact@v1
       if: always()
