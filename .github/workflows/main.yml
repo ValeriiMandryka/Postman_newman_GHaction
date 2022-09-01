@@ -30,7 +30,7 @@ jobs:
       uses: actions/upload-artifact@v1
       if: always()
       with:
-          name: HTML-results
+          name: HTML-Results
           path: ./results
     - name: Publishing HTML artifact to Github Actions
       uses: actions/upload-artifact@v2
