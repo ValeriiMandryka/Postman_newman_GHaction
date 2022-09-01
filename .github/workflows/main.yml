@@ -10,7 +10,7 @@ on:
 jobs:
   postman-run:
     # runs-on: ubuntu-latest
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
@@ -26,22 +26,16 @@ jobs:
       run: npm install -g newman-reporter-htmlextra
     - name: run petstore collection with html report
       run: newman run petstore.collection.json -r htmlextra --reporter-htmlextra-export ./results/report.html
-    - name: Upload Results
-      uses: actions/upload-artifact@v1
+    - name: Output the run Details
+      uses: actions/upload-artifact@v3
       if: always()
       with:
-          name: HTML results
-          path: ./results/report.html
-    - name: Publishing Allure artifact to Github Actions
-      uses: actions/upload-artifact@v2
-      if: always()
-      with:
-          name: HTML-report
-          path: ./results/report.html   
+          name: RunReports
+          path: ./testResults
     - name: Deploy to pages
       if: always()
       uses: peaceiris/actions-gh-pages@v3.7.3
       with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./results/report.html
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_branch: gh-pages
+            publish_dir: ./testResults
