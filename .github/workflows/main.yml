@@ -27,7 +27,7 @@ jobs:
     - name: Run API tests
       run: newman run petstore.collection.json -r htmlextra --reporter-htmlextra-export ./results/report.html 
     - name: Upload Results
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       if: always()
       with:
           name: HTML-results
