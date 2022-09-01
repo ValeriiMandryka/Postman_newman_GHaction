@@ -1,4 +1,4 @@
-name: GH-Actions-Cypress-Cucumber
+name: GH-Actions-postman-newman
 
 on:
   push:
