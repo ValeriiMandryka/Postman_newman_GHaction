@@ -39,11 +39,11 @@ jobs:
       if: always()
       with:
           name: HTML-report
-          path: results/report.html   
+          path: ./results/report.html   
     - name: Deploy to pages
       if: always()
       uses: peaceiris/actions-gh-pages@v3.7.3
       with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: results/report.html
+          publish_dir: ./results/report.html
