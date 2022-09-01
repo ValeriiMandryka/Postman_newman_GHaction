@@ -12,5 +12,9 @@ jobs:
         node-version: '14.x'
     - name: Install dependencies
       run: npm ci
+    - name: Install Newman
+      run: npm install -g newman
+    - name: Install HTML report
+      run: npm install -g newman-reporter-htmlextra
     - name: api test run
       run: npm run petstore:report
