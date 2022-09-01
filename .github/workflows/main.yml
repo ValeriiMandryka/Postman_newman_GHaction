@@ -22,8 +22,6 @@ jobs:
       run: npm ci
     - name: Install Newman
       run: npm install -g newman
-    - name: Run collaction
-      run: newman run petstore.collection.json
     - name: Install reporter HTML
       run: npm install -g newman-reporter-htmlextra
     - name: run petstore collection with html report
