@@ -27,7 +27,7 @@ jobs:
     - name: Run API tests
       run: npm run petstore:report
     - name: Upload Results
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v1
       if: always()
       with:
           name: HTML-results
