@@ -32,12 +32,6 @@ jobs:
       with:
           name: HTML-results
           path: ./results/report.html
-    - name: Publishing HTML artifact to Github Actions
-      uses: actions/upload-artifact@v2
-      if: always()
-      with:
-          name: HTML-report
-          path: ./results/report.html   
     - name: Deploy to pages
       if: always()
       uses: peaceiris/actions-gh-pages@v3.7.3
