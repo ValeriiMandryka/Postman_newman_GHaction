@@ -7,8 +7,8 @@
 5. To run testing server locally run first this command into GitBash or CMD line `npm run tern-on-api`
 6. Then run `newman run store.postman_collection.json` into your IDE (for example - VSC)
 
-### Overview of local server testing
-Routes `/products`, `/orders` and `/users`. Below is a table of supported operations with `products` as example resource. The same operations are also supports for `orders/` and `users/`.
+### Local server testing
+ Below is a table of supported operations with `products` as example resource. The same operations are also supports for `orders/` and `users/`.
 
 | VERB     |Route          | Input      | Output             |
 |----------|---------------|------------|--------------------|
